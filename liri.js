@@ -1,4 +1,5 @@
 require("dotenv").config();
+var moment = require("moment");
 var axios = require("axios");
 var Spotify = require('node-spotify-api');
 var fs = require("fs")
@@ -21,7 +22,9 @@ if (command === "concert-this") {
 
         console.log("Venue: " + response.data[1].venue.name)
         console.log("City: " + response.data[1].venue.city)
-        console.log("Date of Concert: " + response.data[1].datetime)
+        var date = response.data[1].datetime;
+        dat = date.split("T");
+        console.log("Date of Concert: " + dat[0])
 
 
     })
@@ -54,7 +57,7 @@ if (command === "concert-this") {
 
         axios.get("http://www.omdbapi.com/?t=" + "Mr.Nobody" + "&apikey=799e27df").then(response => {
 
-            console.log("Title of movie: " + response.data.title);
+            console.log("Title of movie: " + response.data.Title);
             console.log("When it has released: " + response.data.Released);
             console.log("IMDB rating: " + response.data.imdbRating);
             console.log("Rotten Tomatoes rating: " + response.data.Ratings[1].Source);
@@ -65,13 +68,14 @@ if (command === "concert-this") {
 
 
         }).catch(error => {
-            console.log(error);
+            if (error.response)
+                console.log(error.data);
         });
 
     } else {
         axios.get("http://www.omdbapi.com/?t=" + name + "&apikey=799e27df").then(response => {
 
-            console.log("Title of movie: " + response.data.title);
+            console.log("Title of movie: " + response.data.Title);
             console.log("When it has released: " + response.data.Released);
             console.log("IMDB rating: " + response.data.imdbRating);
             console.log("Rotten Tomatoes rating: " + response.data.Ratings[1].Source);
