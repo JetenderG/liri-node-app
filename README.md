@@ -6,6 +6,14 @@ Description
 
 Requirment
 ----
+
+*node.js*
+
+A run time environment that allows to use of javascript code outside the browser.
+
+> you can download the installer  at https://nodejs.org/en/
+
+
 Need a Spotfiy client key and Secret. You can find instruction in finding the info by clicking on the "node-spotify-api" hyperlink.
 
 Instructions 
