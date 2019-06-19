@@ -4,7 +4,7 @@ Description
 -----------
  A simple program that uses few apis to get information on user input data. The user input must be capable with the command. For example concert-this drake.
 
-Requirment
+Requirement
 ----
 
 *node.js*
@@ -14,7 +14,7 @@ A run time environment that allows to use of javascript code outside the browser
 > you can download the installer  at https://nodejs.org/en/
 
 
-Need a Spotfiy client key and Secret. You can find instruction in finding the info by clicking on the "node-spotify-api" hyperlink.
+Need a Spotifiy client key and Secret. You can find instruction in finding the info by clicking on the "node-spotify-api" hyperlink.
 
 Instructions 
 ---
@@ -27,7 +27,7 @@ Instructions
 
 >node liri.js *command*
 
-There are 4 commmand in this node application:
+There are 4 command in this node application:
 ------------
 
 1. concert-this (name of artist)
@@ -38,7 +38,7 @@ api used: https://rest.bandsintown.com/artists/
 
  2. spotify-this-song (song)
 
-This command will allow you to find info one the song. Specfically artist(s) names and albums. It may also allows a preview of song if avaiable
+This command will allow you to find info one the song. Specifically artist(s) names and albums. It may also allows a preview of song if available
 
 library: node-spotify-api
 
@@ -60,5 +60,5 @@ Built With
 -----
 
  - [Axios](https://www.npmjs.com/package/axios) HTTP Request Promise
- - [Dotenv](https://www.npmjs.com/package/dotenv) Uses Enviroment Variable
+ - [Dotenv](https://www.npmjs.com/package/dotenv) Uses Environment Variable
  - [node-spotify-api](https://www.npmjs.com/package/node-spotify-api) Uses Spotify Api
